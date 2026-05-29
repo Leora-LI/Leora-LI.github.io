@@ -1,0 +1,339 @@
+<!--
+视频插入代码参考模板
+复制相应代码到 projects.html 中
+-->
+
+<!-- ======================================== -->
+<!-- 1. 本地 MP4 视频 (推荐) -->
+<!-- ======================================== -->
+
+<!--
+<div class="video-demo-section">
+    <h4>🎬 产品演示视频</h4>
+    <div class="video-container">
+        <video controls poster="videos/durian-lover-poster.jpg">
+            <source src="videos/durian-lover-demo.mp4" type="video/mp4">
+            <p>您的浏览器不支持HTML5视频。<a href="videos/durian-lover-demo.mp4">点击下载视频</a></p>
+        </video>
+    </div>
+</div>
+-->
+
+<!-- ======================================== -->
+<!-- 2. YouTube 嵌入 -->
+<!-- ======================================== -->
+
+<!--
+<div class="video-demo-section">
+    <h4>🎬 产品演示视频</h4>
+    <div class="video-container">
+        <iframe
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="Durian Lover 演示视频"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+</div>
+-->
+
+<!-- ======================================== -->
+<!-- 3. Vimeo 嵌入 -->
+<!-- ======================================== -->
+
+<!--
+<div class="video-demo-section">
+    <h4>🎬 产品演示视频</h4>
+    <div class="video-container">
+        <iframe
+            src="https://player.vimeo.com/video/123456789"
+            allow="autoplay; fullscreen"
+            allowfullscreen>
+        </iframe>
+    </div>
+</div>
+-->
+
+<!-- ======================================== -->
+<!-- 4. B站 (Bilibili) 嵌入 -->
+<!-- ======================================== -->
+
+<!--
+<div class="video-demo-section">
+    <h4>🎬 产品演示视频</h4>
+    <div class="video-container">
+        <iframe
+            src="//player.bilibili.com/player.html?aid=123456789&bvid=BV1xx411c7mD&cid=123456789"
+            allow="autoplay"
+            allowfullscreen>
+        </iframe>
+    </div>
+</div>
+-->
+
+<!-- ======================================== -->
+<!-- 5. 多格式本地视频 (最佳兼容性) -->
+<!-- ======================================== -->
+
+<!--
+<div class="video-demo-section">
+    <h4>🎬 产品演示视频</h4>
+    <div class="video-container">
+        <video controls poster="videos/durian-lover-poster.jpg">
+            <source src="videos/durian-lover-demo.mp4" type="video/mp4">
+            <source src="videos/durian-lover-demo.webm" type="video/webm">
+            <source src="videos/durian-lover-demo.ogv" type="video/ogg">
+            <p>您的浏览器不支持HTML5视频。</p>
+        </video>
+    </div>
+</div>
+-->
+
+<!-- ======================================== -->
+<!-- 6. 带字幕的视频 -->
+<!-- ======================================== -->
+
+<!--
+<div class="video-demo-section">
+    <h4>🎬 产品演示视频</h4>
+    <div class="video-container">
+        <video controls poster="videos/durian-lover-poster.jpg">
+            <source src="videos/durian-lover-demo.mp4" type="video/mp4">
+            <track kind="subtitles" src="videos/subtitles-zh.vtt" srclang="zh" label="中文">
+            <track kind="subtitles" src="videos/subtitles-en.vtt" srclang="en" label="English">
+        </video>
+    </div>
+</div>
+-->
+
+<!-- ======================================== -->
+<!-- 7. 自动播放视频 (无声) -->
+<!-- ======================================== -->
+
+<!--
+<div class="video-demo-section">
+    <h4>🎬 产品演示视频</h4>
+    <div class="video-container">
+        <video autoplay muted loop controls poster="videos/durian-lover-poster.jpg">
+            <source src="videos/durian-lover-demo.mp4" type="video/mp4">
+        </video>
+    </div>
+</div>
+-->
+
+<!-- ======================================== -->
+<!-- CSS 样式已添加到 css/style.css -->
+<!-- ======================================== -->
+
+<!--
+/* 视频容器 - 响应式 */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.video-container video,
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    border: none;
+}
+
+/* 视频演示区域 */
+.video-demo-section {
+    background: linear-gradient(135deg, #f5f5f5 0%, #fafafa 100%);
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.video-demo-section h4 {
+    margin-top: 0;
+    color: var(--primary-color);
+    font-size: 18px;
+}
+
+/* 手机适配 */
+@media (max-width: 768px) {
+    .video-demo-section {
+        padding: 15px;
+    }
+
+    .video-demo-section h4 {
+        font-size: 16px;
+    }
+}
+-->
+
+<!-- ======================================== -->
+<!-- 视频文件夹结构 -->
+<!-- ======================================== -->
+
+<!--
+personal-website/
+├── videos/                    ← 创建此文件夹
+│   ├── durian-lover-demo.mp4  (主要演示视频)
+│   ├── durian-lover-demo.webm (备用格式)
+│   ├── durian-lover-poster.jpg (视频封面)
+│   ├── subtitles-zh.vtt       (中文字幕，可选)
+│   └── subtitles-en.vtt       (英文字幕，可选)
+├── images/
+├── css/
+└── js/
+-->
+
+<!-- ======================================== -->
+<!-- JavaScript - 增强视频功能 (可选) -->
+<!-- ======================================== -->
+
+<!--
+<script>
+// 自动暂停其他视频
+document.querySelectorAll('video').forEach(video => {
+    video.addEventListener('play', function() {
+        document.querySelectorAll('video').forEach(otherVideo => {
+            if (otherVideo !== video) {
+                otherVideo.pause();
+            }
+        });
+    });
+});
+
+// 视频错误处理
+document.querySelectorAll('video').forEach(video => {
+    video.addEventListener('error', function() {
+        console.error('视频加载失败');
+        const errorMsg = document.createElement('p');
+        errorMsg.style.color = 'red';
+        errorMsg.textContent = '视频加载失败，请检查文件路径';
+        this.parentElement.appendChild(errorMsg);
+    });
+});
+
+// 显示视频加载状态
+document.querySelectorAll('video').forEach(video => {
+    video.addEventListener('loadstart', function() {
+        console.log('视频开始加载...');
+    });
+
+    video.addEventListener('canplay', function() {
+        console.log('视频已就绪，可以播放');
+    });
+
+    video.addEventListener('ended', function() {
+        console.log('视频播放完毕');
+    });
+});
+
+// 统计视频观看情况
+document.querySelectorAll('video').forEach((video, index) => {
+    video.addEventListener('play', function() {
+        console.log(`视频 ${index + 1} 开始播放`);
+        // 可以发送到分析服务
+    });
+});
+</script>
+-->
+
+<!-- ======================================== -->
+<!-- 获取 YouTube 视频 ID -->
+<!-- ======================================== -->
+
+<!--
+YouTube 链接: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+视频 ID: dQw4w9WgXcQ (v= 后的部分)
+
+短链接: https://youtu.be/dQw4w9WgXcQ
+视频 ID: dQw4w9WgXcQ (/ 后的部分)
+
+在嵌入代码中使用:
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+-->
+
+<!-- ======================================== -->
+<!-- 视频字幕格式示例 (WebVTT) -->
+<!-- ======================================== -->
+
+<!--
+文件名: subtitles-zh.vtt
+
+WEBVTT
+
+00:00:00.000 --> 00:00:05.000
+欢迎观看 Durian Lover 产品演示
+
+00:00:05.000 --> 00:00:10.000
+这是一款面向榴莲爱好者的 LBS 导航应用
+
+00:00:10.000 --> 00:00:15.000
+用户可以发现、评分和分享他们最喜爱的榴莲店
+
+00:00:15.000 --> 00:00:20.000
+谢谢观看！
+-->
+
+<!-- ======================================== -->
+<!-- 性能优化建议 -->
+<!-- ======================================== -->
+
+<!--
+1. 视频格式
+   - MP4: 最兼容，文件较大
+   - WebM: Google推荐，高压缩
+   - Ogv: 开源，兼容性一般
+
+2. 文件大小
+   - 推荐: 10-50MB
+   - 封面: 1-2MB
+   - 字幕: <100KB
+
+3. 分辨率
+   - 720p: 标准清晰度
+   - 1080p: 高清
+   - 不建议超过 1080p
+
+4. 比特率
+   - 720p: 2-3 Mbps
+   - 1080p: 4-6 Mbps
+
+5. CDN 加速
+   - GitHub + jsDelivr
+   - YouTube
+   - Vimeo
+   - 阿里云 OSS
+-->
+
+<!-- ======================================== -->
+<!-- 在线视频压缩工具 -->
+<!-- ======================================== -->
+
+<!--
+1. HandBrake (免费、开源)
+   https://handbrake.fr
+   - 降低分辨率
+   - 调整比特率
+   - 支持多种格式
+
+2. FFmpeg (命令行)
+   ffmpeg -i input.mp4 -s 1280x720 -b:v 2000k output.mp4
+
+3. Online Converter
+   https://www.onlineconverter.com
+
+4. CloudConvert
+   https://cloudconvert.com
+
+5. TinyWow
+   https://tinywow.com/video/compress
+-->

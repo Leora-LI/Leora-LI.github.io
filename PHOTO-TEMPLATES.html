@@ -1,0 +1,235 @@
+<!--
+这是一个参考模板文件，展示如何在网站中添加照片
+复制相应的代码到你的 HTML 文件中
+-->
+
+<!-- ======================================== -->
+<!-- 1. 在 about.html 添加头像 (已完成) -->
+<!-- ======================================== -->
+
+<!--
+<section class="about-intro">
+    <div class="intro-with-photo">
+        <div class="photo-section">
+            <img src="images/profile.jpg" alt="黎笑妍" class="profile-photo">
+        </div>
+        <div class="text-section">
+            <h2>自我介绍</h2>
+            <p>内容...</p>
+        </div>
+    </div>
+</section>
+-->
+
+<!-- ======================================== -->
+<!-- 2. 在 index.html 首页项目卡片添加图片 (已完成) -->
+<!-- ======================================== -->
+
+<!--
+<div class="project-card">
+    <div class="project-card-image">
+        <img src="images/project-name.jpg" alt="项目名称" loading="lazy">
+    </div>
+    <h3>项目标题</h3>
+    <p class="role">角色</p>
+    <p>日期</p>
+    <ul>
+        <li>成就1</li>
+        <li>成就2</li>
+    </ul>
+</div>
+-->
+
+<!-- ======================================== -->
+<!-- 3. 在 projects.html 项目详情页添加图片 (已完成) -->
+<!-- ======================================== -->
+
+<!--
+<article class="project-detail">
+    <div class="project-image">
+        <img src="images/project-name.jpg" alt="项目描述" loading="lazy">
+    </div>
+    <h3>项目标题</h3>
+    <div class="project-meta">
+        <span class="badge badge-personal">项目类型</span>
+        <span class="date">时间</span>
+        <span class="tag">标签</span>
+    </div>
+    <div class="project-content">
+        <h4>项目介绍</h4>
+        <p>内容...</p>
+    </div>
+</article>
+-->
+
+<!-- ======================================== -->
+<!-- 4. 添加新的图片库部分 (可选示例) -->
+<!-- ======================================== -->
+
+<!--
+<section class="gallery">
+    <h2>作品展示</h2>
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <img src="images/work-1.jpg" alt="作品1" loading="lazy">
+            <h3>作品标题1</h3>
+        </div>
+        <div class="gallery-item">
+            <img src="images/work-2.jpg" alt="作品2" loading="lazy">
+            <h3>作品标题2</h3>
+        </div>
+        <div class="gallery-item">
+            <img src="images/work-3.jpg" alt="作品3" loading="lazy">
+            <h3>作品标题3</h3>
+        </div>
+    </div>
+</section>
+-->
+
+<!-- ======================================== -->
+<!-- CSS 样式参考 -->
+<!-- ======================================== -->
+
+<!--
+以下 CSS 样式已添加到 css/style.css：
+
+1. 头像样式 (.profile-photo)
+   - 圆形头像
+   - 悬停放大效果
+   - 阴影效果
+
+2. 项目图片 (.project-image)
+   - 响应式尺寸
+   - 图片放大动画
+   - 圆角处理
+
+3. 项目卡片图片 (.project-card-image)
+   - 卡片内集成图片
+   - 悬停放大效果
+   - 自动剪裁
+
+4. 通用图片 (img)
+   - 最大宽度限制
+   - 自适应高度
+-->
+
+<!-- ======================================== -->
+<!-- 图片文件夹结构 -->
+<!-- ======================================== -->
+
+<!--
+personal-website/
+├── images/
+│   ├── profile.jpg              # 个人头像 (300×300)
+│   ├── project-7verse.jpg       # 7verse项目 (600×300)
+│   ├── project-durian.jpg       # Durian项目 (600×300)
+│   ├── project-gis.jpg          # GIS项目 (可选)
+│   ├── project-traffic.jpg      # 交通项目 (可选)
+│   └── ...
+-->
+
+<!-- ======================================== -->
+<!-- 响应式图片示例 (高级用法) -->
+<!-- ======================================== -->
+
+<!--
+<picture>
+    <source media="(max-width: 480px)" srcset="images/profile-small.jpg">
+    <source media="(max-width: 768px)" srcset="images/profile-medium.jpg">
+    <img src="images/profile.jpg" alt="黎笑妍" class="profile-photo">
+</picture>
+-->
+
+<!-- ======================================== -->
+<!-- 懒加载图片示例 (提升性能) -->
+<!-- ======================================== -->
+
+<!--
+<img src="images/project-7verse.jpg" alt="7verse" loading="lazy">
+-->
+
+<!-- ======================================== -->
+<!-- 图片链接示例 (可点击) -->
+<!-- ======================================== -->
+
+<!--
+<a href="images/project-durian.jpg" target="_blank" title="点击查看大图">
+    <img src="images/project-durian.jpg" alt="Durian Lover" class="project-image-link">
+</a>
+-->
+
+<!-- ======================================== -->
+<!-- 自定义 CSS 样式示例 -->
+<!-- ======================================== -->
+
+<!--
+/* 添加到 css/style.css 的示例 */
+
+/* 图片库网格 */
+.gallery {
+    padding: 60px 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.gallery-item {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-item h3 {
+    padding: 15px;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+/* 可点击图片链接 */
+.project-image-link {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.project-image-link:hover {
+    transform: scale(1.05);
+}
+
+/* 图片放大预览 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-image {
+    max-width: 90%;
+    max-height: 90%;
+}
+-->
